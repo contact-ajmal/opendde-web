@@ -5,32 +5,11 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
+import { LogoAperture } from './brand/BrandAssets';
 
 // SVG logo component
 function Logo() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M14 2L24.39 8V20L14 26L3.61 20V8L14 2Z"
-        stroke="#10b981"
-        strokeWidth="2"
-        fill="none"
-      />
-      <circle cx="14" cy="14" r="3" fill="#10b981" />
-      <circle cx="14" cy="6" r="1.5" fill="#10b981" opacity="0.6" />
-      <circle cx="20" cy="10" r="1.5" fill="#10b981" opacity="0.6" />
-      <circle cx="20" cy="18" r="1.5" fill="#10b981" opacity="0.6" />
-      <circle cx="14" cy="22" r="1.5" fill="#10b981" opacity="0.6" />
-      <circle cx="8" cy="18" r="1.5" fill="#10b981" opacity="0.6" />
-      <circle cx="8" cy="10" r="1.5" fill="#10b981" opacity="0.6" />
-      <line x1="14" y1="14" x2="14" y2="6" stroke="#10b981" strokeWidth="1" opacity="0.4" />
-      <line x1="14" y1="14" x2="20" y2="10" stroke="#10b981" strokeWidth="1" opacity="0.4" />
-      <line x1="14" y1="14" x2="20" y2="18" stroke="#10b981" strokeWidth="1" opacity="0.4" />
-      <line x1="14" y1="14" x2="14" y2="22" stroke="#10b981" strokeWidth="1" opacity="0.4" />
-      <line x1="14" y1="14" x2="8" y2="18" stroke="#10b981" strokeWidth="1" opacity="0.4" />
-      <line x1="14" y1="14" x2="8" y2="10" stroke="#10b981" strokeWidth="1" opacity="0.4" />
-    </svg>
-  );
+  return <LogoAperture size={28} />;
 }
 
 interface DropdownItem {
@@ -191,7 +170,7 @@ export default function Navbar() {
                 >
                   Platform
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className={`transition-transform ${openDropdown === 'platform' ? 'rotate-180' : ''}`}>
-                    <path d="M3 5L6 8L9 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                    <path d="M3 5L6 8L9 5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
                   </svg>
                 </button>
                 <Dropdown items={platformItems} open={openDropdown === 'platform'} />
@@ -206,7 +185,7 @@ export default function Navbar() {
                 >
                   Learn
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className={`transition-transform ${openDropdown === 'learn' ? 'rotate-180' : ''}`}>
-                    <path d="M3 5L6 8L9 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                    <path d="M3 5L6 8L9 5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
                   </svg>
                 </button>
                 <Dropdown items={learnItems} open={openDropdown === 'learn'} />

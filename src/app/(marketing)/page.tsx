@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Crosshair, FlaskConical, Box, Beaker, Sparkles, BarChart3, Search, TrendingUp, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
+import { MolecularArt, AccentMesh } from '@/components/brand/BrandAssets';
 
 // ── Scroll-triggered count-up ───────────────────────────────
 function useScrollCountUp(target: number, duration = 1200): [number, React.RefObject<HTMLDivElement>] {
@@ -254,7 +255,7 @@ function VisualWalkthrough() {
               >
                 {tab.cta}
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </Link>
             </div>
@@ -363,7 +364,7 @@ function VideoSection() {
               className="flex h-6 items-center gap-1 rounded border border-[var(--border)] bg-[var(--surface)] px-2 text-[10px] font-medium text-muted hover:text-foreground transition-colors"
               aria-label={playing ? 'Pause demo' : 'Play demo'}
             >
-              {playing ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3" />}
+              {playing ? <Pause className="h-3 w-3" strokeWidth={1.4} /> : <Play className="h-3 w-3" strokeWidth={1.4} />}
               {playing ? 'Pause' : 'Play'}
             </button>
           </div>
@@ -394,14 +395,14 @@ function VideoSection() {
               aria-label="Previous slide"
               style={{ opacity: 1 }}
             >
-              <ChevronLeft className="h-4 w-4" />
+              <ChevronLeft className="h-4 w-4" strokeWidth={1.4} />
             </button>
             <button
               onClick={() => { setPlaying(false); goto(index + 1); }}
               className="absolute right-3 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur transition-opacity hover:bg-black/80"
               aria-label="Next slide"
             >
-              <ChevronRight className="h-4 w-4" />
+              <ChevronRight className="h-4 w-4" strokeWidth={1.4} />
             </button>
 
             {/* Caption overlay */}
@@ -524,7 +525,7 @@ function UseCases() {
               >
                 {uc.cta}
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </Link>
             </motion.div>
@@ -546,6 +547,9 @@ export default function HomePage() {
       {/* ── Hero Section ─────────────────────────────────────── */}
       <section className="relative overflow-hidden px-4 pt-24 pb-16 sm:pt-32 sm:pb-24">
         <BackgroundGrid />
+        <AccentMesh position="tl" intensity={0.12} />
+        <AccentMesh position="br" intensity={0.08} />
+        <MolecularArt variant="ribbon" className="absolute -right-20 top-20 opacity-10 blur-[1px] hidden lg:block" />
         <div className="relative mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -557,10 +561,10 @@ export default function HomePage() {
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
               Open source &middot; MIT Licensed
             </div>
-            <h1 className="text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="text-display leading-tight text-foreground sm:text-5xl lg:text-7xl">
               Open-source AI-powered
               <br />
-              <span className="text-[var(--accent)]">drug design platform</span>
+              <span className="brand-gradient bg-clip-text text-transparent">drug design platform</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
               From protein target to druggable pocket to molecular prediction — in minutes, not months.
@@ -806,7 +810,7 @@ export default function HomePage() {
                     <div className={`flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg ${
                       item.badge ? 'bg-emerald-500/15' : 'bg-[var(--surface-alt)]'
                     }`}>
-                      <item.icon className={`h-4.5 w-4.5 ${item.badge ? 'text-emerald-400' : 'text-muted'}`} />
+                      <item.icon className={`h-4.5 w-4.5 ${item.badge ? 'text-emerald-400' : 'text-muted'}`} strokeWidth={1.4} />
                     </div>
                     <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
                   </div>
