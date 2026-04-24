@@ -171,7 +171,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
           {/* Left: Logo */}
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Logo />
-            <span className="text-lg font-bold text-[var(--accent)]">OpenDDE</span>
+            <span className="text-lg font-bold text-foreground">OpenDDE</span>
           </Link>
 
           {/* Center: Dropdowns */}

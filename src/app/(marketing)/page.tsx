@@ -55,7 +55,7 @@ function BackgroundGrid() {
             <circle cx="20" cy="20" r="1" fill="currentColor" />
           </pattern>
         </defs>
-        <rect width="100%" height="100%" fill="url(#grid)" className="text-emerald-400" />
+        <rect width="100%" height="100%" fill="url(#grid)" className="text-slate-800" />
       </svg>
     </div>
   );
@@ -549,7 +549,6 @@ export default function HomePage() {
         <BackgroundGrid />
         <AccentMesh position="tl" intensity={0.12} />
         <AccentMesh position="br" intensity={0.08} />
-        <MolecularArt variant="ribbon" className="absolute -right-20 top-20 opacity-10 blur-[1px] hidden lg:block" />
         <div className="relative mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -564,7 +563,7 @@ export default function HomePage() {
             <h1 className="text-display leading-tight text-foreground sm:text-5xl lg:text-7xl">
               Open-source AI-powered
               <br />
-              <span className="brand-gradient bg-clip-text text-transparent">drug design platform</span>
+              <span>drug design platform</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
               From protein target to druggable pocket to molecular prediction — in minutes, not months.
@@ -656,9 +655,9 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">The Challenge</p>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-2">The Challenge</p>
             <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
-              Developing a new drug takes <span className="text-[var(--accent)]">10&ndash;15 years</span> and costs <span className="text-[var(--accent)]">$2.6 billion</span>
+              Developing a new drug takes <span>10&ndash;15 years</span> and costs <span>$2.6 billion</span>
             </h2>
           </motion.div>
 
@@ -834,7 +833,7 @@ export default function HomePage() {
       <section className="px-4 py-24">
         <div className="mx-auto max-w-5xl">
           <div className="text-center mb-14">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">The Impact</p>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-2">The Impact</p>
             <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Why computational drug design?</h2>
           </div>
 
@@ -865,7 +864,7 @@ export default function HomePage() {
                 transition={{ delay: i * 0.1 }}
                 className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 text-center"
               >
-                <div className="text-3xl font-bold text-[var(--accent)] sm:text-4xl">{card.number}</div>
+                <div className="text-3xl font-bold text-foreground sm:text-4xl">{card.number}</div>
                 <div className="text-sm font-medium text-foreground">{card.label}</div>
                 <p className="mt-3 text-sm text-muted leading-relaxed">{card.description}</p>
               </motion.div>
@@ -913,7 +912,7 @@ export default function HomePage() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="mb-3 text-sm font-medium uppercase tracking-wider text-emerald-400"
+              className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-2"
             >
               Built on giants
             </motion.p>
@@ -975,7 +974,7 @@ export default function HomePage() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="mb-3 text-sm font-medium uppercase tracking-wider text-emerald-400"
+              className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-2"
             >
               Our mission
             </motion.p>
@@ -1067,7 +1066,7 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="mb-3 text-sm font-medium uppercase tracking-wider text-emerald-400"
+            className="mb-3 text-sm font-medium uppercase tracking-wider text-muted-2"
           >
             Standing on shoulders
           </motion.p>
